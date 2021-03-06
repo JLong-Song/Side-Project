@@ -21,6 +21,6 @@
         </tr>
     </table>
     <input type="button" id="Submit" value="登入">
-    <a href="./forget_password/"></a>
+    <a href="./forget_password/">忘記密碼</a>
 </body>
 </html>
