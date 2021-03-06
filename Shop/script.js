@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#Submit").onclick(function(){
+    $("#Submit").click(function(){
         alert("1");
     });
 });
