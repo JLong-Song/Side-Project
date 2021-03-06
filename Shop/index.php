@@ -13,15 +13,15 @@
     <form action="" method="post">
         <table>
             <tr>
-                <td>±b¸¹:</td>
+                <td>å¸³è™Ÿ:</td>
                 <td><input type="text" id="Account"></td>
             </tr>
             <tr>
-                <td>±K½X:</td>
+                <td>å¯†ç¢¼:</td>
                 <td><input type="password" id="Password"></td>
             </tr>
         </table>
-        <input type="submit" id="Submit" value="µn¤J">
+        <input type="submit" id="Submit" value="ç™»å…¥">
     </form>
     <a href="./forget_password/"></a>
 </body>
