@@ -10,19 +10,17 @@
     <title>Shop</title>
 </head>
 <body>
-    <form action="" method="post">
-        <table>
-            <tr>
-                <td>帳號:</td>
-                <td><input type="text" id="Account"></td>
-            </tr>
-            <tr>
-                <td>密碼:</td>
-                <td><input type="password" id="Password"></td>
-            </tr>
-        </table>
-        <input type="submit" id="Submit" value="登入">
-    </form>
+    <table>
+        <tr>
+            <td>帳號:</td>
+            <td><input type="text" id="Account"></td>
+        </tr>
+        <tr>
+            <td>密碼:</td>
+            <td><input type="password" id="Password"></td>
+        </tr>
+    </table>
+    <input type="button" id="Submit" value="登入">
     <a href="./forget_password/"></a>
 </body>
 </html>
