@@ -20,7 +20,7 @@
                 <td><input type="password" id="Password"></td>
             </tr>
         </table>
-        <input type="submit" value="µn¤J">
+        <input type="submit" id="Submit" value="µn¤J">
     </form>
     <a href="./forget_password/"></a>
 </body>
