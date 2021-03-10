@@ -9,12 +9,12 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/login", methods=['POST'])
+@app.route("/login", methods=["POST"])
 def login():
-    account = request.values.get('Account')
-    password = request.values.get('Password')
-    return f'<p>{crc_16(account)}</p>'
+    account = request.values.get("Account")
+    password = request.values.get("Password")
+    return f"<p>{crc_16(account)}</p>"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run()
