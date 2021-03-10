@@ -4,7 +4,7 @@ app = Flask(__name__)
 app.debug = True
 
 
-@app.route("/")
+@app.route("/", methods=['POST'])
 def index():
     return render_template("index.html")
 
