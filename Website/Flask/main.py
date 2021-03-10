@@ -13,7 +13,7 @@ def index():
 def login():
     account = request.values.get("Account")
     password = request.values.get("Password")
-    return f"<p>{crc_16(account)}</p><p>{crc_16(password)}</p>"
+    return f"<p>{account}</p><p>{crc_16(password)}</p>"
 
 
 if __name__ == "__main__":
