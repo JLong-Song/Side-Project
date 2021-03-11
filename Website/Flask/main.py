@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from security import crc_16
+from security import crc_16, login_confirm
 app = Flask(__name__)
 app.debug = True
 
@@ -13,7 +13,10 @@ def index():
 def login():
     account = request.values.get("Account")
     password = request.values.get("Password")
-    return f"<p>{account}</p><p>{crc_16(password)}</p>"
+    if login_confirm(account, password):
+        return "<p>Success!</p>"
+    else:
+        return f"<p>{account}</p><p>{crc_16(password)}</p>"
 
 
 if __name__ == "__main__":

@@ -4,6 +4,7 @@ Spyder Editor
 
 This is a temporary script file.
 """
+import mysql.connector
 
 
 def crc_16(str):
@@ -20,3 +21,21 @@ def crc_16(str):
     slist.append(register & 0x00FF)
     slist.append((register & 0xFF00) >> 8)
     return slist
+
+
+def login_confirm(account, password):
+    try:
+        conn = mysql.connector.connect(
+            host='127.0.0.1',
+            database='jlong',
+            user='JustForUserLogIn',
+            password='JustForUserLogIn'
+        )
+
+        cursor = conn.cursor()
+        cursor.execute(
+            "SELECT Password FROM users WHERE Username=%s LIMIT 1", (account, ))
+        result = cursor.fetchone()
+        return True if result[0] == password else False
+    except mysql.connector.Error as e:
+        return f"SQL Error:{e}"
