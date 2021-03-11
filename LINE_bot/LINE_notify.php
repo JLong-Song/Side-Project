@@ -2,7 +2,7 @@
     if(isset($_GET['message'])){
         $headers = array(
             'Content-Type: multipart/form-data',
-            'Authorization: Bearer p8SeaSfBaL2cPSJHjpCgmy7Hp6gEl0xJFoAGsAWDZtk'
+            'Authorization: Bearer DC2XlHbknzs3n5vI4D5FRFmObMnmEqpBrlsyvPNPMKz'
         );
         $message = array(
             'message' => $_GET['message']
