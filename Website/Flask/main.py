@@ -13,10 +13,16 @@ def index():
 def login():
     account = request.values.get("Account")
     password = request.values.get("Password")
-    if login_confirm(account, password):
-        return "<p>Success!</p>"
+    success = login_confirm(account, password)
+    if success:
+        return render_template("login.html", status="success")
     else:
-        return f"<p>{account}</p><p>{crc_16(password)}</p>"
+        return render_template("login.html", status=success)
+
+
+@app.route("/user", methods=["POST"])
+def user():
+    return render_template("user.html")
 
 
 if __name__ == "__main__":
