@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from security import *
+from security import crc_16
 app = Flask(__name__)
 app.debug = True
 

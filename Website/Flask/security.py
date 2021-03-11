@@ -20,7 +20,3 @@ def crc_16(str):
     slist.append(register & 0x00FF)
     slist.append((register & 0xFF00) >> 8)
     return slist
-
-
-def format():
-    pass
