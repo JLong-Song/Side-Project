@@ -2,18 +2,20 @@ import tkinter as tk
 
 
 def open_setting():
-    setting_window = tk.Toplevel(window)
-    setting_window.geometry("240x160+0+0")
-    setting_window.mainloop()
+    Setting_window = tk.Toplevel(Window)
+    Setting_window.geometry("240x160+0+0")
+    Setting_window.mainloop()
 
 
-window = tk.Tk()
-window.title("Form")
-window.geometry("480x320+0+0")
+Window = tk.Tk()
+Window.title("Form")
+Window.geometry("480x320+0+0")
 
-setting = tk.Button(window, text="Setting", fg="red",
+Canvas = tk.Canvas(Window, width=640, height=480)
+
+Setting = tk.Button(Window, text="Setting", fg="red",
                     font=("Times New Roman", 12), command=open_setting)
-setting.pack()
+Setting.pack()
 
 
-window.mainloop()
+Window.mainloop()
