@@ -22,7 +22,8 @@ def login():
 
 @app.route("/user", methods=["POST"])
 def user():
-    return render_template("user.html")
+    status = request.values.get("status")
+    return render_template("user.html", status=status)
 
 
 if __name__ == "__main__":

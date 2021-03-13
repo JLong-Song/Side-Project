@@ -26,10 +26,10 @@ def crc_16(str):
 def login_confirm(account, password):
     try:
         conn = mysql.connector.connect(
-            host='127.0.0.1',
-            database='jlong',
+            host='192.168.80.157',
+            database='DiceGame',
             user='JustForUserLogIn',
-            password='JustForUserLogIn'
+            password='User-login123'
         )
 
         cursor = conn.cursor()
