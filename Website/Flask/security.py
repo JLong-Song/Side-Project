@@ -34,7 +34,7 @@ def login_confirm(account, password):
 
         cursor = conn.cursor()
         cursor.execute(
-            "SELECT Password FROM users WHERE Username=%s LIMIT 1", (account, ))
+            "SELECT Password FROM user WHERE Account=%s LIMIT 1", (account, ))
         result = cursor.fetchone()
         return True if result[0] == password else False
     except mysql.connector.Error as e:
