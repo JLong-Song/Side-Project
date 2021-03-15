@@ -26,3 +26,6 @@ def callback():
 def handle_message(event):
     message = TextMessage(text='test')
     line_bot_api.reply_message(event.reply_token, message)
+
+if __name__ == '__main__':
+    app.run()
