@@ -18,7 +18,7 @@ def stock(num):
         code = stock['info']['code']
         high_price = stock['realtime']['high']
         low_price = stock['realtime']['low']
-        message = f"\n{name}({code}):\n[High]{high_price}\n[Low]{low_price}"
+        message = f"{name}({code}):\n[High]{high_price}\n[Low]{low_price}"
     else:
         message = stock['rtmessage']
     return message
@@ -35,7 +35,7 @@ def callback():
     except InvalidSignatureError:
         abort(400)
     
-    return 'OK '
+    return 'OK'
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
