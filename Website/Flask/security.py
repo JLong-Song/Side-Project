@@ -26,7 +26,7 @@ def crc_16(str):
 def login_confirm(account, password):
     try:
         conn = mysql.connector.connect(
-            host='192.168.80.157',
+            host='192.168.80.156',
             database='DiceGame',
             user='JustForUserLogIn',
             password='User-login123'
