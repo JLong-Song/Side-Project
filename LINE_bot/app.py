@@ -16,11 +16,17 @@ def stock(num):
     if stock['success']:
         name = stock['info']['name']
         code = stock['info']['code']
+        latest_trade_price = stock['realtime']['latest_trade_price']
+        open_price = stock['realtime']['open']
         high_price = stock['realtime']['high']
         low_price = stock['realtime']['low']
-        message = f"{name}({code}):\n[High]{high_price}\n[Low]{low_price}"
+        message = f"{name}({code}):\n"
+        message += f"[1]開盤價:{open_price}\n"
+        message += f"[2]最新成交價:{latest_trade_price}\n"
+        message += f"[3]最高價:{high_price}\n"
+        message += f"[4]最低價:{low_price}"
     else:
-        message = stock['rtmessage']
+        message = "查無此代號"
     return message
 
 @app.route('/callback', methods=['POST'])
