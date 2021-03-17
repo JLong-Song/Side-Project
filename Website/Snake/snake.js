@@ -61,6 +61,7 @@ function Draw(){
     }
     if((snake[0][0] < 0 || snake[0][0] > 169) || (snake[0][1] < 0 || snake[0][1] > 74) || table[snake[0][1]][snake[0][0]] == 1){
         alert("Failed");
+        timestamp = 0;
         return;
     }else if(table[snake[0][1]][snake[0][0]] == 2){
         eat();
